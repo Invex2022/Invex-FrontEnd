@@ -14,10 +14,10 @@ const Navbar = () => {
     const navigate = useNavigate()
 
     return (
-        <Box sx={{ display: 'flex'}}>
-            <AppBar component="nav" sx = {{ backgroundColor: '#1B2856' }}>
-                <Toolbar sx={{ justifyContent : 'space-between' }}>
-                    <div className = "logo-section">
+        <Box sx={{ display: 'flex', marginBottom: "60px"}}>
+            <AppBar component="nav" sx = {{ backgroundColor: '#1B2856' , padding:0}}>
+                <Toolbar sx={{ justifyContent : 'space-between'}}>
+                    <div className = "logo-section" onClick={() => navigate('/')}>
                         <div className='logo-container'>
                             <img src={logo} className="logo" alt="logo"/>
                         </div>
@@ -29,7 +29,7 @@ const Navbar = () => {
                             INVEX
                         </Typography>
                     </div>
-                    <Box sx={{ display: { xs: 'none', sm: 'block' }, width:300, justifyContent : 'space-between'}} className = "box">
+                    <Box sx={{ display: { xs: 'none', sm: 'block' }, width:'300', justifyContent : 'space-between'}} className = "box">
                         <Button className='nav-item' key='about' sx={{ color: '#fff' }} onClick={() => navigate('/about')}>
                             <Typography>About</Typography>
                         </Button>
