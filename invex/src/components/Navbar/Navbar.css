@@ -1,0 +1,44 @@
+.logo-section {
+    display: flex;
+}
+
+.logo-container {
+    flex: 50%;
+    width: 60px;
+    height: 60px;
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+    padding-top: 4px;
+    transform: scale(2.5);
+}
+.box:hover .nav-item {
+    opacity: 0.5;
+    filter: blur(2px);
+}
+
+.box .nav-item:hover {
+    opacity: 1;
+    filter: blur(0px);
+    transform: scale(1.1);
+}
+
+.nav-item::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0087ca;
+    /* transform-origin: bottom right; */
+    transition: transform 0.25s ease-out;
+  }
+  
+  .nav-item:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
