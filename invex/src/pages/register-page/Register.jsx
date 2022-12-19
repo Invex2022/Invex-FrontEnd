@@ -70,7 +70,7 @@ const Register = () => {
                         "&:hover" : {
                             backgroundColor : '#6C63FF'
                         }
-                    }}>Create your account</Button>
+                    }}>Create an account</Button>
                 </div>
             </div>
         </>
