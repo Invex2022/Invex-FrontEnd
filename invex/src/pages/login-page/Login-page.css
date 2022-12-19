@@ -1,0 +1,27 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.login-view {
+    display: flex;
+    padding-top: 10px;
+    height: 89vh;
+    width: 100vw;
+    margin: auto;
+}
+
+.login-first, .login-second {
+    flex: 50%;
+}
+
+.login-pic {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+}
+
+.login-second {
+    align-items: center;
+}

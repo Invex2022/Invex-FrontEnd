@@ -16,11 +16,12 @@ const Register = () => {
             <Navbar />
             <div className='form-section'>
                 <div className='first-section'>
-                    <img src = {getStarted} alt='login' className='login-pic'/>
+                    <img src = {getStarted} alt='login' className='sign-pic'/>
                 </div>
 
                 <div className='second-section'>
                     <Typography
+                        sx={{height: "20vh",  display:"flex", alignItems: "end", paddingBottom: "20px"}}
                         variant = "h3"
                     >
                         Create a new account.
@@ -30,44 +31,42 @@ const Register = () => {
                     >
                         Already a member? 
                     </Typography>
-
-                    <div>
-                        <TextField
-                            id="standard-basic" 
-                            label="First Name" 
-                            variant="standard"
-                            onChange={(e) => setFirstName(e.target.value)}
-                            sx={{margin:2}}
-                        />
-                        <TextField
-                            id="standard-basic" 
-                            label="Last Name" 
-                            variant="standard"
-                            onChange={(e) => setLastName(e.target.value)}
-                            sx={{margin:2}}
-                        />
-                    </div>
-                    <div>
-                        <TextField
-                            id="standard-basic" 
-                            label="Email" 
-                            variant="standard"
-                            onChange={(e) => setEmail(e.target.value)}
-                            sx={{margin:2}}
-                        />
-                        <TextField
-                            id="standard-basic" 
-                            label="Password"
-                            type= "password" 
-                            variant="standard"
-                            onChange={(e) => setPassword(e.target.value)}
-                            sx={{margin:2}}
-                        />
-                    </div>
+                    <TextField
+                        id="standard-basic" 
+                        label="First Name" 
+                        variant="standard"
+                        onChange={(e) => setFirstName(e.target.value)}
+                        sx={{marginRight:2}}
+                    />
+                    <TextField
+                        id="standard-basic" 
+                        label="Last Name" 
+                        variant="standard"
+                        onChange={(e) => setLastName(e.target.value)}
+                        sx={{marginRight:2, marginBottom:3}}
+                    />
+                    <br></br>
+                    <TextField
+                        id="standard-basic" 
+                        label="Email" 
+                        variant="standard"
+                        onChange={(e) => setEmail(e.target.value)}
+                        sx={{marginRight:5, marginBottom:5, width:350}}
+                    />
+                    <br></br>
+                    <TextField
+                        id="standard-basic" 
+                        label="Password"
+                        type= "password" 
+                        variant="standard"
+                        onChange={(e) => setPassword(e.target.value)}
+                        sx={{marginRight:5, marginBottom:5, width:350}}
+                    />
+                    <br></br>
                     <Button 
                         variant="contained" sx={{ 
                         backgroundColor: '#24387C', 
-                        margin : 3,
+                        marginTop : 3,
                         "&:hover" : {
                             backgroundColor : '#6C63FF'
                         }
