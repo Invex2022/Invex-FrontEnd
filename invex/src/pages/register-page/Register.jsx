@@ -1,16 +1,14 @@
-import { useState } from 'react'
-import { Button, TextField, Typography } from '@mui/material'
-import Navbar from '../../components/Navbar/Navbar'
-import getStarted from '../../assets/example-29.svg'
-import './Register.css'
+import { Button, TextField, Typography } from '@mui/material';
+import Navbar from '../../components/Navbar/Navbar';
+import getStarted from '../../assets/example-29.svg';
+import './Register.css';
+import useAuth from '../../hooks/useAuth';
 
 
 const Register = () => {
-    const [firstName, setFirstName] = useState('')
-    const [lastName, setLastName] = useState('')
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
 
+    const { handleChange, signup } = useAuth()
+   
     return (
         <>
             <Navbar />
@@ -22,7 +20,7 @@ const Register = () => {
                 <div className='second-section'>
                     <Typography
                         sx={{height: "20vh",  display:"flex", alignItems: "end", paddingBottom: "20px"}}
-                        variant = "h3"
+                        variant = "h4"
                     >
                         Create a new account.
                     </Typography>
@@ -32,38 +30,43 @@ const Register = () => {
                         Already a member? 
                     </Typography>
                     <TextField
+                        name="first_name"
                         id="standard-basic" 
                         label="First Name" 
                         variant="standard"
-                        onChange={(e) => setFirstName(e.target.value)}
+                        onChange={handleChange}
                         sx={{marginRight:2}}
                     />
                     <TextField
+                        name='last_name'
                         id="standard-basic" 
                         label="Last Name" 
                         variant="standard"
-                        onChange={(e) => setLastName(e.target.value)}
+                        onChange={handleChange}
                         sx={{marginRight:2, marginBottom:3}}
                     />
                     <br></br>
                     <TextField
+                        name='email'
                         id="standard-basic" 
                         label="Email" 
                         variant="standard"
-                        onChange={(e) => setEmail(e.target.value)}
+                        onChange={handleChange}
                         sx={{marginRight:5, marginBottom:5, width:350}}
                     />
                     <br></br>
                     <TextField
+                        name='password'
                         id="standard-basic" 
                         label="Password"
                         type= "password" 
                         variant="standard"
-                        onChange={(e) => setPassword(e.target.value)}
+                        onChange={handleChange}
                         sx={{marginRight:5, marginBottom:5, width:350}}
                     />
                     <br></br>
                     <Button 
+                        onClick = {signup}
                         variant="contained" sx={{ 
                         backgroundColor: '#24387C', 
                         marginTop : 3,
